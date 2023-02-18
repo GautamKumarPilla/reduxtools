@@ -1,8 +1,9 @@
-import React from "react"
-import { productsReducer } from "../features/products/productSlice";
+
+import { booksReducer } from "../features/books/booksSlice";
 import { configureStore } from '@reduxjs/toolkit'
 
 export default configureStore({
   reducer: {
-    products: productsReducer
-} })
+    books: booksReducer
+}
+})
