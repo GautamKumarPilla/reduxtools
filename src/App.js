@@ -7,7 +7,7 @@ import Products from './features/products/Products';
 function App() {
   return (
     <Provider store={store}>
-       <div className='border border-3 p-3 bg-dark text-light border-danger'>
+       <div className='border border-3 p-3 bg-dark text-danger border-danger'>
        <Products/>
        </div>
     </Provider>

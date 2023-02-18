@@ -14,7 +14,7 @@ function Products(){
         <b>
           {
             products && products.map((product)=>{
-              return <li>{product.title}</li>
+              return <li className="p-2 border border-danger m-2">{product.title}</li>
             })
           }
         </b>
