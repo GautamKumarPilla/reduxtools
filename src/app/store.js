@@ -1,10 +1,10 @@
-import React from "react"
-import { productsReducer } from "../features/products/productSlice";
+import productsReducer from '../features/products/productSlice';
 import { configureStore } from '@reduxjs/toolkit'
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
-    products: productsReducer
-} })
+    products : productsReducer
+  }
+})
 
-// export default store;
+export default store;
