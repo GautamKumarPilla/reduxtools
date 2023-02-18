@@ -10,7 +10,7 @@ import { increment,decrement,reset } from "./counterSlice";
         <h1>Counter:{count}</h1>
         <button onClick={()=>{dispatch(increment())}}>Increment</button>
         <button onClick={()=>{dispatch(decrement())}}>Decrement</button>
-        <button onClick={()=>{dispatch(reset())}}>Reset</button>
+        <button onClick={()=>{dispatch(reset())}}>Reset</button><br /><br /><br />
     </div>
   )
  }
