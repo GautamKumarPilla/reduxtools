@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Books from './app/features/Books'
+import store from './app/services/store';
+import Books from './app/features/books/Books';
 import { Provider } from 'react-redux';
 
 function App() { 

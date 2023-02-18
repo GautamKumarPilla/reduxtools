@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const GetBooks = createAsyncThunk('/getbooks',async function(){
-    var res = await fetch("https://localhost:4444/books")
+    var res = await fetch("http://localhost:4444/books")
     return (res.json())
 }) 
 
