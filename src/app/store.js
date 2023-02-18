@@ -1,4 +1,11 @@
 import React from "react"
-import useSelector from "@reduxjs/toolkit"
+import { productsReducer } from "../features/products/productSlice";
+import { configureStore } from '@reduxjs/toolkit'
+
+export const store = configureStore({
+  reducer: {
+    products : productsReducer
+  },
+})
 
 export default store;
