@@ -12,6 +12,7 @@ export const booksSlice = createSlice({
     },
     extraReducers:{
         [GetBooks.fulfilled]:(state,action)=>{
+            console.log(action.payload,"payload")
             state.books = action.payload;
         }
     }
