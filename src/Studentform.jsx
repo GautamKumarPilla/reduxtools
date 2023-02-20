@@ -33,7 +33,7 @@ function addstudent(){
     <div align="center">
     <form onSubmit={handleSubmit}>
          <table width='50%' >
-            <thead align="center" colspan='3'>
+            <thead  align="center" colSpan='3'>
                <h1>Student Details</h1>
                 </thead>
             <tbody>
@@ -79,8 +79,8 @@ function addstudent(){
                     <input type="number" name="" id="" onBlur={handlePincode}/>
                 </td>
             </tr>
-            <tr colSpan='3' align="center">
-                <td> 
+            <tr> 
+                <td colSpan='2' align='center'> 
                     <button className="btn btn-outline-success">Add Student</button>
                 </td>
             </tr>
