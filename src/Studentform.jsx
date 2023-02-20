@@ -30,10 +30,10 @@ function addstudent(){
       console.log(newstudent)
 }
   return(
-    <div>
+    <div align="center">
     <form onSubmit={handleSubmit}>
-         <table width='50%' align="center">
-            <thead align="center" aria-colspan={2}>
+         <table width='50%' >
+            <thead align="center" colspan='3'>
                <h1>Student Details</h1>
                 </thead>
             <tbody>
@@ -64,7 +64,7 @@ function addstudent(){
             <tr>
                 <td>Country</td> 
                 <td>
-                <select name="" id="" onChange={(a)=>{setnewstudent({...newstudent,country:a.target.value})}}>Select Country
+                <select name="" id="" placeholder="Select Country" onChange={(a)=>{setnewstudent({...newstudent,country:a.target.value})}}>
                 <option value="IND">India</option>
                 <option value="PAK">Pakistan</option>
                 <option value="NP">Nepal</option>
@@ -79,13 +79,13 @@ function addstudent(){
                     <input type="number" name="" id="" onBlur={handlePincode}/>
                 </td>
             </tr>
-            <tr colSpan={2} align="center">
+            <tr colSpan='3' align="center">
                 <td> 
-                    <button>Add Student</button>
+                    <button className="btn btn-outline-success">Add Student</button>
                 </td>
             </tr>
             </tbody>
-         </table>
+         </table><br /><br />
     </form>
     </div>
   )
