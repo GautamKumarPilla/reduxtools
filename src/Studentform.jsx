@@ -9,16 +9,30 @@ function Studentform(){
     country:'',
     pincode:''
   })
-function handleSubmit(){
-   preventDefault()
+function handleSubmit(a){
+    a.preventDefault();
+    if(newstudent.pincode>999999 || newstudent.pincode<=100000){
+        alert("Please enter valid pincode")
+        return
+    }
+    addstudent();
 }
-function addstudent(e){
-      console.log(e.target.value)
+function handlePincode(a){
+    if(a.target.value>999999 || a.target.value<=100000){
+      a.target.style.border="3px solid salmon"
+        return
+    }
+    else{
+        setnewstudent({...newstudent,pincode:a.target.value})
+    }
+}
+function addstudent(){
+      console.log(newstudent)
 }
   return(
     <div>
     <form onSubmit={handleSubmit}>
-         <table width={'50%'} align="center">
+         <table width='50%' align="center">
             <thead align="center" aria-colspan={2}>
                <h1>Student Details</h1>
                 </thead>
@@ -26,31 +40,31 @@ function addstudent(e){
             <tr>
                     <td>Firstname</td>
                     <td>
-                        <input type="text" name="" id="" onChange={(a)=>setnewstudent(a.target.value)}/>
+                        <input type="text" required name="" id="" onChange={(a)=>{setnewstudent({...newstudent,firstname:a.target.value})}}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Lastname</td>
                     <td>
-                        <input type="text" name="" id="" />
+                        <input type="text" name="" id="" onChange={(a)=>{setnewstudent({...newstudent,lastname:a.target.value})}}/>
                     </td>
                 </tr>
             <tr>
                 <td>Gender</td>
                 <td>
-                    <input type="radio" name="male" value="gen"/>:Male
-                    <input type="radio" name="female" value="gen"/>:Female
-                    <input type="radio" name="others" value="gen"/>:Others
+                    <input type="radio" name="gen" value="MALE" onChange={(a)=>{setnewstudent({...newstudent,gender:a.target.value})}}/>:Male
+                    <input type="radio" name="gen" value="FEMALE" onChange={(a)=>{setnewstudent({...newstudent,gender:a.target.value})}}/>:Female
+                    <input type="radio" name="gen" value="OTHERS" onChange={(a)=>{setnewstudent({...newstudent,gender:a.target.value})}}/>:Others
                 </td>
             </tr>
             <tr>
             <td>Date Of Birth</td>
-            <td><input type="date" name="" id="" required/></td>
+            <td><input type="date" name="" id="" required onChange={(a)=>{setnewstudent({...newstudent,dob:a.target.value})}}/></td>
             </tr>    
             <tr>
-                <td>Country</td>
+                <td>Country</td> 
                 <td>
-                <select name="" id="">Select Country
+                <select name="" id="" onChange={(a)=>{setnewstudent({...newstudent,country:a.target.value})}}>Select Country
                 <option value="IND">India</option>
                 <option value="PAK">Pakistan</option>
                 <option value="NP">Nepal</option>
@@ -62,12 +76,12 @@ function addstudent(e){
             <tr>
                 <td>Pincode</td>
                 <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" onBlur={handlePincode}/>
                 </td>
             </tr>
-            <tr colSpan={2}>
+            <tr colSpan={2} align="center">
                 <td> 
-                    <button onClick={()=>{addstudent()}}>Add Student</button>
+                    <button>Add Student</button>
                 </td>
             </tr>
             </tbody>
