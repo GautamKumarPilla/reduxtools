@@ -1,4 +1,4 @@
-import { Formik } from "formik"         //using formik component only
+import { Formik } from "formik"         //using formik component and getfieldprops
 import * as Yup from 'yup'
 
 function SignupFormik() {

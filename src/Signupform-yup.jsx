@@ -27,16 +27,16 @@ function Signup(props){
         <form onSubmit={myform.handleSubmit} autoComplete=''>
            <label htmlFor="firstname">Firstname:</label>&nbsp;&nbsp;
             <input type="text" name="firstname" id="firstname" onBlur={myform.handleBlur} onChange={myform.handleChange} value={myform.values.firstname}/>
-            <h5>{myform.touched.firstname && myform.errors.firstname}</h5>
+            <h5 className="text-danger">{myform.touched.firstname && myform.errors.firstname}</h5>
             <label htmlFor="lastname">Lastname:</label>&nbsp;&nbsp;
             <input type="text" name="lastname" id="lastname" onBlur={myform.handleBlur} onChange={myform.handleChange} value={myform.values.lastname}/>
-            <h5>{myform.touched.lastname && myform.errors.lastname}</h5>
+            <h5 className="text-danger">{myform.touched.lastname && myform.errors.lastname}</h5>
             <label htmlFor="email">Email-Address:</label>&nbsp;&nbsp;
             <input type="email" name="email" id="email" onBlur={myform.handleBlur} onChange={myform.handleChange} value={myform.values.email}/>
-            <h5>{myform.touched.email && myform.errors.email}</h5>
+            <h5 className="text-danger">{myform.touched.email && myform.errors.email}</h5>
             <label htmlFor="password">Password:</label>&nbsp;&nbsp;
             <input type="password" name="password" id="password" onBlur={myform.handleBlur} onChange={myform.handleChange} value={myform.values.password}/>
-            <h5>{myform.touched.password && myform.errors.password}</h5>
+            <h5 className="text-warning">{myform.touched.password && myform.errors.password}</h5>
             <button type="submit" className="btn btn-outline-success">Submit</button>
         </form>
         </div>

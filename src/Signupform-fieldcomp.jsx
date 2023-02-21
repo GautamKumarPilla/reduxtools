@@ -4,17 +4,21 @@ import * as Yup from 'yup'
 function SignupField() {
  
   return (
-    <div className='border border-2 border-info p-2 m-2'>
-      <h1>Sign-Up Form</h1>
+    <div align="center" className='border border-2 border-info p-2 m-2'>
+      <h1>Sign-Up Form(Fields)</h1>
       <Formik
         initialValues={{
           firstname:'',
           lastname:'',
-          dob:''
+          dob:'',
+          gender:'',
+          luggage:''
         }}
         validationSchema={Yup.object({
-          firstname:Yup.string().max(8,"Please enter max of 8").min(3,'too small').required('Please andi firstname'),
-          lastname:Yup.string().max(10,"please below 10").min(5,'too small').required('*lastname')
+          firstname:Yup.string().max(8,"Please enter max of 8").min(3,'too small').required('*Please enter firstname'),
+          lastname:Yup.string().max(10,"please below 10").min(5,'too small').required('*enter-lastname'),
+          gender:Yup.string().max(10,"please below 10").min(5,'too small').required('*Select gender'),
+          luggage:Yup.boolean().required('*select one')
         })}
         onSubmit={(values)=>{
           console.log("onsubmit",values)
@@ -26,13 +30,22 @@ function SignupField() {
               <form onSubmit={formik.handleSubmit}>
                 <label htmlFor="fn">First Name</label>
                 <Field name="firstname"></Field>
-                <div>{formik.touched.firstname && formik.errors.firstname}</div>
+                <div className="text-danger">{formik.touched.firstname && formik.errors.firstname}</div>
                 <label htmlFor="ln">Last Name</label>
                 <Field name="lastname"></Field>
-                <div>{formik.touched.lastname && formik.errors.lastname}</div>
+                <div className="text-danger">{formik.touched.lastname && formik.errors.lastname}</div>
                 <label htmlFor="db">Date of Birth</label>
-                <Field name='dob'></Field>
-                <br></br>
+                <Field type='date' name='dob'></Field>
+                <div></div>
+                <label htmlFor="gn">Gender</label>
+                <Field type="radio" name="gender" value="male"></Field>Male
+                <Field type="radio" name="gender" value="female"></Field>Female
+                <Field type="radio" name="gender" value="others"></Field>Others
+                <div>{formik.touched.gender && formik.errors.gender}</div>
+                <label htmlFor="ck">Luggage</label>
+                <Field type="checkbox" name="luggage" value="yes"></Field>Yes
+                <Field type="checkbox" name="luggage" value="no"></Field>No
+                <div>{formik.touched.luggage && formik.errors.luggage}</div>
                 <button type="submit">Add Student</button>
               </form>
             )

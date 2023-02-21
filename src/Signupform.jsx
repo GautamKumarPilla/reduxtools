@@ -6,6 +6,9 @@ function formikForm(values){
     errors.firstname='*firstname is required';
   //  errors.firstname.style.border="2px solid red";
   }
+  if(!values.lastname){
+    errors.lastname='*lastname is required';
+  }
   if(!values.dob){
     errors.dob='*please input your dob'
   }
@@ -31,13 +34,13 @@ function Signups() {
       <form onSubmit={myform.handleSubmit}>
         <label htmlFor="fn">First Name</label>
         <input type="text" name="firstname" onChange={myform.handleChange} onBlur={myform.handleBlur}/>
-        <div>{myform.touched.firstname && myform.errors.firstname}</div>
+        <div className="text-danger">{myform.touched.firstname && myform.errors.firstname}</div>
         <label htmlFor="ln">Last Name</label>
         <input type="text" name="lastname" onChange={myform.handleChange} onBlur={myform.handleBlur}/>
-        <div>{myform.touched.lastname && myform.errors.lastname}</div>
+        <div className="text-danger">{myform.touched.lastname && myform.errors.lastname}</div>
         <label htmlFor="db">Date of Birth</label>
         <input type="date" name="dob" onChange={myform.handleChange} onBlur={myform.handleBlur}/>
-        <div>{myform.touched.dob && myform.errors.dob}</div>
+        <div className="text-danger">{myform.touched.dob && myform.errors.dob}</div>
         <br></br>
         <button type="submit" className="btn btn-outline-info">Add Student</button>
       </form>
