@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react";        //normal html5 version form validations
 
 function Studentform(){
   const[newstudent,setnewstudent]= useState({

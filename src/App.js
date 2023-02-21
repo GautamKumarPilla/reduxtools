@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Studentform from './Studentform';
-import Signup from './Signupform';
+import Signup from './Signupform-yup';
+import Signups from './Signupform';
 
 function App() {
   return (
-    <div style={{backgroundColor:"orange"}}>
-      <Studentform/>
+    <div style={{backgroundColor:"bisque"}}>
+      <Signups/>
       <Signup/>
     </div>
   );
