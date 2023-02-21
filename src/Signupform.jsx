@@ -1,9 +1,10 @@
-import { useFormik } from "formik"
+import { useFormik } from "formik"        //useFormik-Hook and errors-checking
 
 function formikForm(values){
   var errors={};
   if(!values.firstname){
-    errors.firstname='*firstname is required'
+    errors.firstname='*firstname is required';
+  //  errors.firstname.style.border="2px solid red";
   }
   if(!values.dob){
     errors.dob='*please input your dob'
@@ -23,9 +24,9 @@ function Signups() {
       console.log("onsubmit",values)
     }
   })
-  console.log(myform.touched)
+ // console.log(myform.touched)
   return (
-    <div align="center" className='border border-2 border-info p-4'>
+    <div align="center" className='border border-2 border-info p-4 m-3'>
       <h1>Sign-Up Form</h1>
       <form onSubmit={myform.handleSubmit}>
         <label htmlFor="fn">First Name</label>
@@ -38,7 +39,7 @@ function Signups() {
         <input type="date" name="dob" onChange={myform.handleChange} onBlur={myform.handleBlur}/>
         <div>{myform.touched.dob && myform.errors.dob}</div>
         <br></br>
-        <button type="submit">Add Student</button>
+        <button type="submit" className="btn btn-outline-info">Add Student</button>
       </form>
     </div>
   )

@@ -5,7 +5,7 @@ import Signups from './Signupform';
 
 function App() {
   return (
-    <div style={{backgroundColor:"bisque"}}>
+    <div style={{backgroundColor:"bisque"}} className="border border-3 border-danger">
       <Signups/>
       <Signup/>
     </div>

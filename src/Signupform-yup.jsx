@@ -22,7 +22,7 @@ function Signup(props){
         }
     })
     return(
-        <div align="center" className='border border-2 border-info p-4'>
+        <div align="center" className='border border-2 border-info p-4 m-3'>
          <h1>Registration Form(Yup)</h1> 
         <form onSubmit={myform.handleSubmit} autoComplete=''>
            <label htmlFor="firstname">Firstname:</label>&nbsp;&nbsp;
