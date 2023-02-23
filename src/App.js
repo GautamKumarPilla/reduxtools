@@ -5,7 +5,7 @@ import { Link, Outlet } from 'react-router-dom';
 function App() {
   return (
     <div>
-    <Link to="dashboard" className='d-flex p-2 w-100 bg-dark'>Dash-Board</Link>
+    <Link to="dashboard" className='d-flex p-2 w-100 bg-dark border border-5 m-1'>Dash-Board</Link>
     <Outlet></Outlet>
     </div>
   );

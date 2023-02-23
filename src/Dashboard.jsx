@@ -2,10 +2,10 @@ import { Link, Outlet } from "react-router-dom"
 
 function Dashboard() {
   return (
-    <div>
+    <div className="border border-2 p-2">
       <h1>Dashboard</h1>
-      <div className="d-flex flex-wrap">
-        <ul className="w-25">
+      <div className="d-flex flex-wrap border border-2 p-2">
+        <ul className="w-25" type="none">
           <li>
             <Link to="/dashboard/addCarType">Add Car Type</Link>
           </li>

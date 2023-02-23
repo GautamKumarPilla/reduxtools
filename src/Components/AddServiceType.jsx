@@ -8,16 +8,17 @@ function AddServiceType() {
       method: 'post',
       url: 'http://localhost:4000/serviceTypes',
       data: {
-        type: newServiceType
+        id: '',
+        title: newServiceType
       }
     }).then(()=>{
-      alert("HI")
+      alert("ADDED")
     })
   }
   return (
     <div>
       <h1>AddServiceType</h1>
-      <input type="text" onChange={(e)=>{setNewServiceType(e.target.value)}}/>
+      <input type="text" onChange={(e)=>{setNewServiceType(e.target.value)}}/>&nbsp;&nbsp;
       <button onClick={addServiceType}>Add Service Type</button>
     </div>
   )

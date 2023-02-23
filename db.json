@@ -32,7 +32,7 @@
         "Hatchback": 30,
         "Sedan": 50,
         "CrossOver": 100,
-        "SUV": 150
+        "XUV": 150
       }
     },
     {
@@ -44,6 +44,37 @@
         "Sedan": 70,
         "CrossOver": 120,
         "SUV": 200
+      }
+    },
+    {
+      "id": 3,
+      "type": ""
+    },
+    {
+      "id": 4,
+      "serviceType": "",
+      "serviceTitle": ""
+    },
+    {
+      "id": 5,
+      "serviceType": "Cleaning",
+      "serviceTitle": "COMPLETE",
+      "serviceCost": {
+        "Hatchback": "455",
+        "XUV": "455",
+        "Sedan": "455",
+        "CrossOver": "455"
+      }
+    },
+    {
+      "id": 6,
+      "serviceType": "Puncture",
+      "serviceTitle": "Tireless",
+      "serviceCost": {
+        "Hatchback": "876",
+        "XUV": "876",
+        "Sedan": "876",
+        "CrossOver": "876"
       }
     }
   ],

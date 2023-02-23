@@ -10,9 +10,9 @@ import {
 } from "react-router-dom";
 import Dashboard from './Dashboard';
 import AddCarType from './Components/AddCarType';
-import AddServiesType from './Components/AddServiceType';
 import AddService from './Components/AddService';
-const router = createBrowserRouter([
+import AddServiceType from './Components/AddServiceType';
+const router = createBrowserRouter([ 
   {
     path: "/",
     element: <App></App>,
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
           },
           {
             path:'/dashboard/addServiceType',
-            element:<AddServiesType></AddServiesType>
+            element:<AddServiceType></AddServiceType>
           },
           {
             path:'/dashboard/addService',
