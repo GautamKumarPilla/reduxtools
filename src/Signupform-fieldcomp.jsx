@@ -4,10 +4,10 @@ import * as Yup from 'yup'
 function SignupField() {
  
   return (
-    <div align="center" className='border border-2 border-info p-2 m-2'>
+    <div align="center" className='border border-2 border-info p-2 m-2 bg-secondary'>
       <h1>Sign-Up Form(Fields)</h1>
       <Formik
-        initialValues={{
+        initialValues={{                                                   
           firstname:'',
           lastname:'',
           dob:'',
@@ -18,7 +18,7 @@ function SignupField() {
           firstname:Yup.string().max(8,"Please enter max of 8").min(3,'too small').required('*Please enter firstname'),
           lastname:Yup.string().max(10,"please below 10").min(5,'too small').required('*enter-lastname'),
           gender:Yup.string().max(10,"please below 10").min(5,'too small').required('*Select gender'),
-          luggage:Yup.boolean().required('*select one')
+          luggage:Yup.object().required('*select one')
         })}
         onSubmit={(values)=>{
           console.log("onsubmit",values)
@@ -41,12 +41,12 @@ function SignupField() {
                 <Field type="radio" name="gender" value="male"></Field>Male
                 <Field type="radio" name="gender" value="female"></Field>Female
                 <Field type="radio" name="gender" value="others"></Field>Others
-                <div>{formik.touched.gender && formik.errors.gender}</div>
+                <div className="text-danger">{formik.touched.gender && formik.errors.gender}</div>
                 <label htmlFor="ck">Luggage</label>
                 <Field type="checkbox" name="luggage" value="yes"></Field>Yes
                 <Field type="checkbox" name="luggage" value="no"></Field>No
-                <div>{formik.touched.luggage && formik.errors.luggage}</div>
-                <button type="submit">Add Student</button>
+                <div className="text-danger">{formik.touched.luggage && formik.errors.luggage}</div><br />
+                <button type="submit" className="btn btn-outline-warning">Add Student</button>
               </form>
             )
           }

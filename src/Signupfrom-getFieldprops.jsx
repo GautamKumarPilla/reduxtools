@@ -9,8 +9,8 @@ function SignupGetFieldProps() {
       dob:''
     },
     validationSchema:Yup.object({
-      firstname:Yup.string().max(8,"not more than 8").min(3,'too small').required('*firstname'),
-      lastname:Yup.string().max(10,"please below 10").min(5,'too small').required('*lastname')
+      firstname:Yup.string().max(8,"not more than 8").min(3,'too small').required('*this here is mandatory'),
+      lastname:Yup.string().max(10,"please below 10").min(5,'too small').required('*this here is mandatory')
     }),
     // validate:checkForm,
     onSubmit:(values)=>{
@@ -19,17 +19,17 @@ function SignupGetFieldProps() {
   })
   console.log(formik.touched)
   return (
-    <div className='border border-2 border-info p-2 m-2'>
+    <div align="center" className='border border-2 border-info p-2 m-2 bg-danger'>
       <h1>Sign-Up Form</h1>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="fn">First Name</label>
         <input type="text"  {...formik.getFieldProps('firstname')}/>
-        <div>{formik.touched.firstname && formik.errors.firstname}</div>
+        <div className="text-light">{formik.touched.firstname && formik.errors.firstname}</div>
         <label htmlFor="ln">Last Name</label>
         <input type="text" {...formik.getFieldProps('lastname')}/>
-        <div>{formik.touched.lastname && formik.errors.lastname}</div>
+        <div className="text-light">{formik.touched.lastname && formik.errors.lastname}</div>
         <label htmlFor="db">Date of Birth</label>
-        <input type="text" {...formik.getFieldProps('dob')}/>
+        <input type="date" {...formik.getFieldProps('dob')}/>
         <br></br>
         <button type="submit">Add Student</button>
       </form>

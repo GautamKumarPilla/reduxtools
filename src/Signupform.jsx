@@ -29,7 +29,7 @@ function Signups() {
   })
  // console.log(myform.touched)
   return (
-    <div align="center" className='border border-2 border-info p-4 m-3'>
+    <div align="center" className='border border-2 border-info p-4 m-3 bg-warning'>
       <h1>Sign-Up Form</h1>
       <form onSubmit={myform.handleSubmit}>
         <label htmlFor="fn">First Name</label>
