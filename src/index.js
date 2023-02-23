@@ -9,9 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Dashboard from './Dashboard';
-import AddCarType from './components/AddCarType';
-import AddServiesType from './components/AddServiesType';
-import AddService from './components/AddService';
+import AddCarType from './Components/AddCarType';
+import AddServiesType from './Components/AddServiceType';
+import AddService from './Components/AddService';
 const router = createBrowserRouter([
   {
     path: "/",
