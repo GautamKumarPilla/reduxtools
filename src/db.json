@@ -1,0 +1,67 @@
+{
+    "carTypes": [
+      {
+        "id": 1,
+        "type": "Hatchback"
+      },
+      {
+        "id": 2,
+        "type": "Sedan"
+      },
+      {
+        "id": 3,
+        "type": "CrossOver"
+      },
+      {
+        "id": 4,
+        "type": "SUV"
+      }
+    ],
+    "serviceTypes": [
+      {
+        "id": 1,
+        "title": "Puncture"
+      }
+    ],
+    "services": [
+      {
+        "id": 1,
+        "serviceType": "Puncture",
+        "serviceTitle": "TubelessPuncture",
+        "serviceCost": {
+          "Hatchback": 30,
+          "Sedan": 50,
+          "CrossOver": 100,
+          "SUV": 150
+        }
+      },
+      {
+        "id": 2,
+        "serviceType": "Puncture",
+        "serviceTitle": "WithTubePuncture",
+        "serviceCost": {
+          "Hatchback": 40,
+          "Sedan": 70,
+          "CrossOver": 120,
+          "SUV": 200
+        }
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
