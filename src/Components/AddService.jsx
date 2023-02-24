@@ -35,7 +35,7 @@ function AddService(){
           <option value="Repair">Repair</option>
         </select><br/><br/>
         Servicetitle:<input type="text" name="" id="" onChange={(a)=>{setserviceTitle(a.target.value)}}/>
-        <table className="table table-bordered mt-3">
+        <table className="table table-bordered mt-3 text-warning">
           <thead>
             <tr>
               <td>Car Type</td>
