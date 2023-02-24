@@ -12,6 +12,10 @@ import Dashboard from './Dashboard';
 import AddCarType from './Components/AddCarType';
 import AddService from './Components/AddService';
 import AddServiceType from './Components/AddServiceType';
+import ServiceCatalog from './Components/ServiceCatalog';
+import Booking from './Components/Booking';
+import Details from './Components/Details';
+import ServicingBooking from './Components/ServicingBooking';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -32,11 +36,32 @@ const router = createBrowserRouter([
           {
             path:'/dashboard/addService',
             element:<AddService></AddService>
+          },
+          {
+            path:'/dashboard/viewServices',
+            element:<ServiceCatalog></ServiceCatalog>
+          }
+        ]
+      },
+      {
+        path:'/booking',
+        element:<Booking></Booking>,
+        children:[
+          {
+            path:'/booking',
+            element:<Details></Details>
+          },
+          {
+            path:'/booking/serviceBooking',
+            element:<ServicingBooking></ServicingBooking>
           }
         ]
       }
+
     ]
+
   },
+  
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
 
