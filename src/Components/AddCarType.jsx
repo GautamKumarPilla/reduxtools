@@ -16,10 +16,10 @@ function AddCarType() {
     })
   }
   return (
-    <div>
-      <h1>AddCarType</h1>
-      <input type="text" onChange={(e)=>{setNewcarType(e.target.value)}}/>&nbsp;&nbsp;
-      <button onClick={addCarType}>Add Car Type</button>
+    <div className='border rounded border-warning p-3 bg-primary'>
+      <h1 className='text-warning'>Add CarType</h1>
+      <input type="text" className='form-control required' placeholder='Enter here' onChange={(e)=>{setNewcarType(e.target.value)}}/> <hr />
+      <button className='text-warning btn btn-outline-light' onClick={addCarType}>Add Car Type</button>
     </div>
   )
 }

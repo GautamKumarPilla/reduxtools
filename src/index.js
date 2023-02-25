@@ -16,6 +16,7 @@ import ServiceCatalog from './Components/ServiceCatalog';
 import Booking from './Components/Booking';
 import Details from './Components/Details';
 import ServicingBooking from './Components/ServicingBooking';
+import Billing from './Components/Billing';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
           {
             path:'/booking/serviceBooking',
             element:<ServicingBooking></ServicingBooking>
+          },
+          {
+            path:'/booking/serviceBooking/billing',
+            element:<Billing></Billing>
           }
         ]
       }

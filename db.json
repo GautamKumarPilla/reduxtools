@@ -2,7 +2,7 @@
   "carTypes": [
     {
       "id": 1,
-      "type": "Hatchback"
+      "type": "Ferrari"
     },
     {
       "id": 2,
@@ -15,6 +15,18 @@
     {
       "id": 4,
       "type": "SUV"
+    },
+    {
+      "id": 5,
+      "type": "Hatchback"
+    },
+    {
+      "id": 6,
+      "type": "XUV"
+    },
+    {
+      "id": 7,
+      "type": "Benz"
     }
   ],
   "serviceTypes": [
@@ -24,7 +36,15 @@
     },
     {
       "id": 2,
-      "title": "GENERAL"
+      "title": "General"
+    },
+    {
+      "id": 3,
+      "title": "Cleaning"
+    },
+    {
+      "id": 4,
+      "title": "Car Drying"
     }
   ],
   "services": [
@@ -51,26 +71,18 @@
       }
     },
     {
-      "id": 3,
       "serviceType": "Cleaning",
-      "serviceTitle": "COMPLETE",
+      "serviceTitle": "Car-Body",
       "serviceCost": {
-        "Hatchback": "455",
-        "XUV": "455",
-        "Sedan": "455",
-        "CrossOver": "455"
-      }
-    },
-    {
-      "id": 4,
-      "serviceType": "Puncture",
-      "serviceTitle": "Tireless",
-      "serviceCost": {
-        "Hatchback": "876",
-        "XUV": "876",
-        "Sedan": "876",
-        "CrossOver": "876"
-      }
+        "Hatchback": "700",
+        "Sedan": "1000",
+        "CrossOver": "1200",
+        "XUV": "2000",
+        "SUV": "1500",
+        "Ferrari": "30000",
+        "Benz": "50000"
+      },
+      "id": 3
     }
   ],
   "posts": [

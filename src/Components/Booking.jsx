@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom'
 
 function Booking() {
   return (
-    <div>
-        <h1>Booking</h1>
+    <div className='border border-2 m-3 p-3'>
+        <h1>Booking</h1><hr/>
         <Outlet></Outlet>
     </div>
   )

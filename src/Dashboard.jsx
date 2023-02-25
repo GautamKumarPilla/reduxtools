@@ -4,27 +4,29 @@ function Dashboard() {
   return (
     <div className="border border-2 p-2">
       <h1>Dashboard</h1>
-      <div className="d-flex flex-wrap border border-2 p-2">
-        <ul className="w-25" type="none">
+      <div className="d-flex border border-2 p-2">
+        <div className="mt-5 d-flex flex-wrap justify-content-center ">
+        <ul className="text-decoration-none" type="none">
           <li>
-            <Link to="/dashboard/addCarType">Add Car Type</Link>
+            <Link to="/dashboard/addCarType" className=" border rounded text-danger text-decoration-none">Add Car Type</Link>
           </li>
           <li>
-            <Link to="/dashboard/addServiceType">Add Service Type</Link>
+            <Link to="/dashboard/addServiceType" className=" border rounded text-danger text-decoration-none">Add Service Type</Link>
           </li>
           <li>
-            <Link to="/dashboard/addService">Add Service</Link>
+            <Link to="/dashboard/addService" className=" border rounded text-danger text-decoration-none">Add Service</Link>
           </li>
           <li>
-            <Link to="/dashboard/viewServices">View Services</Link>
+            <Link to="/dashboard/viewServices" className=" border rounded text-danger text-decoration-none">View Services</Link>
           </li>
         </ul>
-        <div className="w-25 p-3 bg-success">
+        </div>
+       
+        <div className="w-50 p-4">
           <Outlet></Outlet>
         </div>
-      </div>
-      
-    </div>
+        </div>
+      </div> 
   )
 }
 export default Dashboard

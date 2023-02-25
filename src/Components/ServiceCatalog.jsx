@@ -11,8 +11,8 @@ function ServiceCatalog() {
     })
    },[]);
   return (
-    <div className='text-light'>
-      <h1 className='text-warning'>Service Catalog</h1>
+    <div className='text-secondary p-3'>
+      <h1 className='text-warning'>Service-Catalog</h1>
       {
         Object.keys(services).map((st)=>{
           return <li>
