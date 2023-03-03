@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { useNavigate } from 'react-router-dom'            //navigate is used instead of Link.
 
 function Details(props) {
-  var navigate = useNavigate()
+  var navigate = useNavigate();
   const [carTypes, setCarTypes] = useState([]);
   const [user,setUser] = useState({});
   useEffect(()=>{
@@ -18,9 +18,9 @@ function Details(props) {
     })
   },[]);
   function updateUser(){
-    console.log(user)
+   // console.log(user)
     props.dispatch({type:'UPDATEUSER',payload:user})
-    navigate("/booking/serviceBooking")
+    navigate("/booking/servicebooking")
   }
   
   return (

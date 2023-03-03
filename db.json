@@ -56,7 +56,7 @@
         "Hatchback": 30,
         "Sedan": 50,
         "CrossOver": 100,
-        "XUV": 150
+        "SUV": 150
       }
     },
     {

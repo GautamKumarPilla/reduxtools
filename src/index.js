@@ -15,8 +15,9 @@ import AddServiceType from './Components/AddServiceType';
 import ServiceCatalog from './Components/ServiceCatalog';
 import Booking from './Components/Booking';
 import Details from './Components/Details';
-import ServicingBooking from './Components/ServicingBooking';
-import Billing from './Components/Billing';
+import ServiceBooking from './Components/ServiceBooking';
+import Payment from './Components/Payment';
+import Endpage from './Components/Endpage';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -53,12 +54,16 @@ const router = createBrowserRouter([
             element:<Details></Details>
           },
           {
-            path:'/booking/serviceBooking',
-            element:<ServicingBooking></ServicingBooking>
+            path:'/booking/servicebooking',
+            element:<ServiceBooking></ServiceBooking>
           },
           {
-            path:'/booking/serviceBooking/billing',
-            element:<Billing></Billing>
+            path:'/booking/payment/:amount',
+            element:<Payment></Payment>
+          },
+          {
+            path:'/booking/payment/endpage',
+            element:<Endpage></Endpage>
           }
         ]
       }
@@ -69,9 +74,7 @@ const router = createBrowserRouter([
   
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
-
     <RouterProvider router={router} />
-
 );
 
 // If you want to start measuring performance in your app, pass a function
