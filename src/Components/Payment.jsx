@@ -76,8 +76,8 @@ const messagedisplay=()=>{
         <h5>Net Payable Amount:{amount}</h5>
       </div>
       <div className='d-flex flex-wrap w-50'></div><br/>
-      <div className='d-flex flex-wrap justify-content-center w-50'>
-      <button className='btn btn-info w-50' onClick={()=>{teleport('/booking/payment/endpage')}}>Pay Now</button>
+      <div className=' w-50' style={{marginLeft:'600px'}}>
+        <button className='btn btn-info w-50' onClick={()=>{teleport('/booking/payment/endpage')}}>Pay Now</button>
       </div>
     </div>
   )
