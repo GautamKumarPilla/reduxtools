@@ -26,7 +26,8 @@ const messagedisplay=()=>{
                 <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                 <i class="bi bi-cash-coin"></i> Other Payment Modes <br/><span style={{fontSize:'70%'}}></span> </button>
             </div>
-        <div class="tab-content" id="v-pills-tabContent" className='d-flex w-75 border border-5 rounded border-secondary p-3 mx-5'>
+            <div className='d-flex flex-wrap w-75 border border-5 rounded border-secondary p-4 mx-5'>
+            <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
               <div className='form-label'><br/>
                 Pay with Credit/Debit Card </div>
@@ -72,9 +73,12 @@ const messagedisplay=()=>{
                 <input type="radio" name="other" id="" className='form-check-input'/>SliceCard <br/>
               </div>
             </div>
+         </div>
+       
         </div>
         <h5>Net Payable Amount:{amount}</h5>
       </div>
+       
       <div className='d-flex flex-wrap w-50'></div><br/>
       <div className=' w-50' style={{marginLeft:'600px'}}>
         <button className='btn btn-info w-50' onClick={()=>{teleport('/booking/payment/endpage')}}>Pay Now</button>
