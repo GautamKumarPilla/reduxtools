@@ -6,14 +6,18 @@ import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div> 
     <Provider store={store}>
-      <div>
-      <Link to="dashboard" className='d-flex text-decoration-none text-success p-2 w-100 bg-dark border border-5 m-1'>Dash-Board &nbsp;&nbsp;&nbsp;
-    <Link to="booking" className='text-decoration-none text-success'>Booking</Link>
-    </Link> 
-        <Outlet></Outlet>
-      </div>
+      <div className='' style={{backgroundImage:"url('https://wallpaperaccess.com/full/2085186.jpg')",height:'120vh'}}>
+        <div className='mx-auto m-1' style={{width:'95%'}}>
+          <Link to="/dashboard" className='d-flex text-decoration-none text-success p-3 w-100 bg-dark border border-5'>Dash-Board &nbsp;&nbsp;&nbsp;
+          <Link to="/booking" className='text-decoration-none text-success'>Booking</Link>
+          <Link to="/login" className='d-flex ms-auto text-decoration-none text-warning'>Login</Link>&nbsp;&nbsp;&nbsp;
+          <Link to="/signup" className='text-decoration-none text-warning'>Sign-Up</Link>&nbsp;&nbsp;&nbsp;
+          </Link>          
+          <Outlet></Outlet>
+        </div>
+      </div>  
     </Provider>
     </div>
   );

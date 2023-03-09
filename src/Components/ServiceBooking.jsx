@@ -40,7 +40,7 @@ function ServiceBooking(props){
    
   return(
     <div className='container d-flex flex-wrap'>
-      <div className='border border-info w-50 p-4'>
+      <div className='border border-info w-50 p-4 bg-dark'>
       <h1>ServiceBooking</h1>
       {
         Object.keys(services).map((st,i)=>{
@@ -67,7 +67,7 @@ function ServiceBooking(props){
         })
       }    
     </div>
-    <div className='border-danger border w-25 p-3 mx-5 me-1'>
+    <div className='border border-danger w-25 mx-5'>
            <Bill bill={selectedServices}></Bill>
           </div>
     </div>

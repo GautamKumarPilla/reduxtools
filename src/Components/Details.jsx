@@ -24,9 +24,9 @@ function Details(props) {
   }
   
   return (
-    <div className="p-4 bg-info w-75 mx-auto border">
+    <div className="p-4 w-75 mx-auto border bg-dark">
     <h1>Details</h1>
-    <div className="d-flex flex-wrap bg-secondary border p-4">
+    <div className="d-flex flex-wrap border p-4">
       <div className="w-50 p-2">
         <label htmlFor="" className="form-label">Full Name</label>
         <input type="text" className="form-control" onChange={(e)=>{setUser({...user,fullname:e.target.value})}}/>

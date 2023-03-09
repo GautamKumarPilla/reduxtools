@@ -5,13 +5,14 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 function Payment() {
 const {amount} = useParams();
 const teleport = useNavigate();
-const messagedisplay=()=>{
-  alert(`                  Thank You!
+const confirmPayment=()=>{
+  window.confirm(`                  Thank You!
   Your booking has now been confirmed and you will get future
-   updates on your mobile number `)
+   updates on your mobile number `);
+   teleport('/endpage');
 }
   return (
-    <div className='border border-3 rounded p-2'>
+    <div className='border border-3 rounded mx-5 p-3 bg-dark'>
       <h1>Payment</h1>                      
     <div class="d-flex align-items-start">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -29,13 +30,19 @@ const messagedisplay=()=>{
             <div className='d-flex flex-wrap w-75 border border-5 rounded border-secondary p-4 mx-5'>
             <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-              <div className='form-label'><br/>
+              <div className='form-label'>
                 Pay with Credit/Debit Card </div>
-                <input type="text" name="" placeholder='xxxx-xxxx-xxxx-xxxx' className='form-control form-control-lg'/><br/>
-                Date Of Expiry 
-                <input type="text" name="" placeholder='MM/YY' className='form-control'/><br/>
-                CVV/CVC
-                <input type="text" name="" placeholder='***' className='form-control'/><br/>
+                <input type="text" name="" placeholder='xxxx-xxxx-xxxx-xxxx' className='form-control form-control-lg'/>
+                <div className='d-flex justify-content-between' style={{gap:'10px'}}>
+                <div className='w-50'>
+                    Date Of Expiry 
+                    <input type="text" name="" placeholder='MM/YY' className='form-control'/>
+                  </div>
+                  <div className='w-50'>
+                    CVV/CVC
+                    <input type="text" name="" placeholder='***' className='form-control'/>
+                  </div>
+                </div>
                 Cardholder's Name
                 <input type="text" name="" className='form-control'/><br/>
             </div> 
@@ -50,15 +57,21 @@ const messagedisplay=()=>{
               <option value="5">PNB</option>
               <option value="6">CBI</option>
               <option value="7">BOI</option>
-            </select><br/>
+            </select>
             Username: <input type="text" className='form-control' />
             IFSC: <input type="text" className='form-control' />
+            <div className='d-flex justify-content-between' style={{gap:'10px'}}>
+              <div className='w-50'>
             Branch-Name: <input type="text" className='form-control' />
-            Branch-Code: <input type="text" className='form-control' />
+              </div>
+              <div className='w-50'>
+              Branch-Code: <input type="text" className='form-control' />
+              </div>
+            </div>
             </div>
             <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
               <label htmlFor="" class='form-label'>Enter UPI Id:</label>
-              <input type="text" name="" id="" class='form-control'/>
+              <input type="text" name="" id="" placeholder='Ex:7988718092@upi' class='form-control'/>
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
               <label htmlFor="" class='form-label'>Enter PayPal Id:</label>
@@ -80,8 +93,8 @@ const messagedisplay=()=>{
       </div>
        
       <div className='d-flex flex-wrap w-50'></div><br/>
-      <div className=' w-50' style={{marginLeft:'600px'}}>
-        <button className='btn btn-info w-50' onClick={()=>{teleport('/booking/payment/endpage')}}>Pay Now</button>
+      <div className=' w-50' style={{marginLeft:'400px'}}>
+        <button className='btn btn-info w-50' onClick={confirmPayment}>Pay Now</button>
       </div>
     </div>
   )

@@ -16,15 +16,15 @@ function Bill(props) {
   },[props.bill]);
 console.log(total)
   return (
-    <div className='p-2'>
+    <div className='bg-dark p-2'>
        <h1>Bill</h1>
        {
         Object.keys(props.bill).map((st)=>{
-         return <div className='p-2'>
+         return <div className='bg-dark p-2'>
           <h4>{st}</h4>
           {
             props.bill && Object.keys(props.bill[st]).map((s)=>{
-              return <div className='p-2'>
+              return <div className='bg-dark p-2'>
               <b>{s}:{props.bill[st][s]}</b>
              </div>
               })

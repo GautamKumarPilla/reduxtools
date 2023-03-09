@@ -4,7 +4,7 @@ function Dashboard() {
   return (
     <div className="border border-2 p-2">
       <h1>Dashboard</h1>
-      <div className="d-flex border border-2 p-2">
+      <div className="d-flex border border-2 p-2 bg-secondary">
         <div className="mt-5 d-flex flex-wrap justify-content-center ">
         <ul className="text-decoration-none" type="none">
           <li>
