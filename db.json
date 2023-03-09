@@ -85,6 +85,28 @@
       "id": 3
     }
   ],
+  "signup": [
+    {
+      "Username": "SuriRaven",
+      "Fullname": "Suresh Raina",
+      "EmailID": "suri21@gmail.com",
+      "Mobile": "3333366666",
+      "Pincode": "564021",
+      "Password": "qwertyu",
+      "RePassword": "qwertyu",
+      "id": 1
+    },
+    {
+      "Username": "Newlyborn",
+      "Fullname": "Newlyborn Girl",
+      "EmailID": "Newlyborn@gmail.com",
+      "Mobile": "984521736",
+      "Pincode": "546987",
+      "Password": "asdfgttrewq",
+      "RePassword": "asdfgttrewq",
+      "id": 2
+    }
+  ],
   "posts": [
     {
       "id": 1,

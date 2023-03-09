@@ -33,7 +33,7 @@ function AddService() {
   return (
       <div className="text-warning border rounded border-warning p-3 bg-primary">
       <h1>Add Service</h1>
-      Service-Type: <select name="serviceType" onChange={(a) =>{setnewService({...newService,serviceType:a.target.value})}}>
+      Service-Type: <select name="serviceType" className="form-select w-50" onChange={(a) =>{setnewService({...newService,serviceType:a.target.value})}}>
         <option value={null} selected disabled>Select Service-Type</option>
         {
         serviceTypes && serviceTypes.map((ST) =>{
@@ -41,7 +41,7 @@ function AddService() {
         })
       }
       </select>
-      <br/> <br/>
+      <br/>
       Service-Title: <input type="text" className='form-control' placeholder="Enter Service Title" onChange={(a) =>{setnewService({...newService,serviceTitle:a.target.value})}}/> <hr/>
       <h5 className="text-light">Enter car services cost:</h5>
       {

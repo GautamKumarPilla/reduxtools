@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import * as _ from 'lodash';
+import { useNavigate } from 'react-router-dom';
 
 function ServiceCatalog() {
+  const teleport = useNavigate();
   const [services, setServices] = useState({})
   useEffect(() =>{
     axios.get("http://localhost:4000/services").then((res) =>{
@@ -37,6 +39,7 @@ function ServiceCatalog() {
             </li>
         })
       }
+      <button onClick={()=>{teleport('/booking')}} className="d-flex mx-auto text-light border border-2 border-warning btn btn-outline-success">Book Service</button>
     </div>
   )
 }

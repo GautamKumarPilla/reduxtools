@@ -67,7 +67,7 @@ function ServiceBooking(props){
         })
       }    
     </div>
-    <div className='border border-danger w-25 mx-5'>
+    <div className='border border-danger rounded w-25 ms-auto'>
            <Bill bill={selectedServices}></Bill>
           </div>
     </div>

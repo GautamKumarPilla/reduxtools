@@ -4,7 +4,9 @@ import { useEffect,useState } from "react"
 import { connect } from "react-redux";
 import { useNavigate } from 'react-router-dom'            //navigate is used instead of Link.
 
+
 function Details(props) {
+ 
   var navigate = useNavigate();
   const [carTypes, setCarTypes] = useState([]);
   const [user,setUser] = useState({});
@@ -14,7 +16,8 @@ function Details(props) {
  
   useEffect(()=>{
     axios.get("http://localhost:4000/carTypes").then((res)=>{
-      setCarTypes([...res.data])
+      setCarTypes([...res.data]);
+       window.screen("Loggedin Successfully!")
     })
   },[]);
   function updateUser(){

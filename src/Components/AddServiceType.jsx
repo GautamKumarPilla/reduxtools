@@ -18,7 +18,7 @@ function AddServiceType() {
   return (
     <div className='border rounded border-warning p-3 bg-primary'>
       <h1 className='text-warning'>Add ServiceType</h1> 
-      <input type="text" className='form-control' onChange={(e)=>{setNewServiceType(e.target.value)}}/> <hr />
+      <input type="text" className='form-control' onChange={(e)=>{setNewServiceType(e.target.value)}} placeholder="Enter here"/> <hr />
       <button className='text-warning btn btn-outline-light' onClick={addServiceType}>Add Service Type</button>
     </div>
   )
