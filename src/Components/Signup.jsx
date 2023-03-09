@@ -28,19 +28,19 @@ function Signup(){
     
      <form className='form-control'>
      <h3 className='text-center text-primary'>Sign-Up Form</h3>
-      <label htmlFor=''>Username</label>  
+      <label htmlFor='' className='text-primary'>Username</label>  
       <input type="text" required name="" id="" placeholder='Enter username' className='form-control' onChange={(a)=>{setNewUser({...newUser,Username:a.target.value})}}/>
-      <label htmlFor="" className='form-label'>Fullname</label>  
+      <label htmlFor="" className='text-primary'>Fullname</label>  
       <input type="text" required name="" id="" placeholder='Enter fullname' className='form-control' onChange={(a)=>{setNewUser({...newUser,Fullname:a.target.value})}}/>
-      <label htmlFor="">Email-ID</label>  
+      <label htmlFor="" className='text-primary'>Email-ID</label>  
       <input type="email" required name="" id="" placeholder='Enter email-id' className='form-control' onChange={(a)=>{setNewUser({...newUser,EmailID:a.target.value})}}/>
-      <label htmlFor="">Mobile</label>  
+      <label htmlFor="" className='text-primary'>Mobile</label>  
       <input type="text" required name="" id="" placeholder='Enter mobile number' className='form-control' onChange={(a)=>{setNewUser({...newUser,Mobile:a.target.value})}}/>
-      <label htmlFor="">Pincode</label>  
+      <label htmlFor="" className='text-primary'>Pincode</label>  
       <input type="text" name="" id="" placeholder='Enter pincode' className='form-control' onChange={(a)=>{setNewUser({...newUser,Pincode:a.target.value})}}/>
-      <label htmlFor="">Password</label>  
+      <label htmlFor="" className='text-primary'>Password</label>  
       <input type="password" required name="" id="" placeholder='Enter password' className='form-control' onChange={(a)=>{setNewUser({...newUser,Password:a.target.value})}}/>
-      <label htmlFor="">Confirm Password</label>  
+      <label htmlFor="" className='text-primary'>Confirm Password</label>  
       <input type="password" required name="" id="" placeholder='Re-enter password' className='form-control' onChange={(a)=>{setNewUser({...newUser,RePassword:a.target.value})}}/>
       <div className="d-flex justify-content-center ">
        <button className="btn btn-outline-dark border border-3 border-danger mt-2" onClick={addSignup}>Submit</button>

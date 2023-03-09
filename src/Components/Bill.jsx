@@ -34,7 +34,7 @@ console.log(total)
       }
       <h2>Total:{total}</h2>
       {
-        total!==0 && <button className='btn btn-outline-success' onClick={()=>{navigate(`/booking/payment/${total}`)}}>Proceed for payment</button>
+        total!==0 && <button className='btn btn-outline-success d-flex mx-auto' onClick={()=>{navigate(`/booking/payment/${total}`)}}>Proceed for payment</button>
       }
     </div>
   )
