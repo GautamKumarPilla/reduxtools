@@ -44,7 +44,7 @@ const confirmPayment=()=>{
                   </div>
                 </div>
                 Cardholder's Name
-                <input type="text" name="" className='form-control'/><br/>
+                <input type="text" name="" placeholder='Maximum of 16 characters' className='form-control'/><br/>
             </div> 
          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
               <label htmlFor="" class="form-label">Name Of Bank</label>
@@ -58,14 +58,14 @@ const confirmPayment=()=>{
               <option value="6">CBI</option>
               <option value="7">BOI</option>
             </select>
-            Username: <input type="text" className='form-control' />
-            IFSC: <input type="text" className='form-control' />
-            <div className='d-flex justify-content-between' style={{gap:'10px'}}>
+            Username: <input type="text" className='form-control' placeholder='Enter here'/>
+            IFSC Code: <input type="text" className='form-control' placeholder='Ex:BOI63457N, CBI73320N'/>
+            <div className='d-flex justify-content-between' style={{gap:'44px'}}>
               <div className='w-50'>
-            Branch-Name: <input type="text" className='form-control' />
+            Branch-Name: <input type="text" className='form-control' placeholder='Ex: Kukatpally'/>
               </div>
               <div className='w-50'>
-              Branch-Code: <input type="text" className='form-control' />
+            Branch-Code: <input type="text" className='form-control'/>
               </div>
             </div>
             </div>
@@ -75,7 +75,7 @@ const confirmPayment=()=>{
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
               <label htmlFor="" class='form-label'>Enter PayPal Id:</label>
-              <input type="text" name="" id="" class='form-control'/>
+              <input type="text" name="" id="" class='form-control' placeholder='Enter here'/>
             </div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
               <div>

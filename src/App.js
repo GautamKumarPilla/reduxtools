@@ -8,7 +8,7 @@ function App() {
   return (
     <div> 
     <Provider store={store}>
-      <div className='' style={{backgroundImage:"url('https://wallpaperaccess.com/full/2085186.jpg')",height:'100vh'}}>
+      <div style={{backgroundImage:"url('https://wallpaperaccess.com/full/2085186.jpg')",height:'100vh'}}>
         <div className='mx-auto m-1' style={{width:'95%'}}>
           <Link to="/dashboard" className='d-flex text-decoration-none text-success p-3 w-100 bg-dark border border-5'>Dash-Board &nbsp;&nbsp;&nbsp;
           <Link to="/booking" className='text-decoration-none text-success'>Booking</Link>

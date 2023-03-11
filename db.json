@@ -105,6 +105,26 @@
       "Password": "asdfgttrewq",
       "RePassword": "asdfgttrewq",
       "id": 2
+    },
+    {
+      "Username": "",
+      "Fullname": "",
+      "EmailID": "",
+      "Mobile": "",
+      "Pincode": "",
+      "Password": "",
+      "RePassword": "",
+      "id": 3
+    },
+    {
+      "Username": "",
+      "Fullname": "",
+      "EmailID": "",
+      "Mobile": "",
+      "Pincode": "",
+      "Password": "",
+      "RePassword": "",
+      "id": 4
     }
   ],
   "posts": [
