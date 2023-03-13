@@ -16,8 +16,8 @@ const Login =()=>{
     return(
     <div className="bg-text">
     <div className="w-25 mx-auto">
-        <form className="form-control">
-            <h3 className="text-primary">Login</h3>
+        <form className="form-control bg-dark">
+            <h3 className="text-primary text-center">Login</h3>
             <label htmlFor="" className="form-lable mt-2 text-success">Username</label>
             <input type="text" required placeholder="Enter username" className="form-control" />
             <label htmlFor="" className="form-lable mt-2 text-danger">Password</label>

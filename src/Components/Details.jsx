@@ -32,15 +32,15 @@ function Details(props) {
     <div className="d-flex flex-wrap border p-4">
       <div className="w-50 p-2">
         <label htmlFor="" className="form-label">Full Name</label>
-        <input type="text" className="form-control" onChange={(e)=>{setUser({...user,fullname:e.target.value})}}/>
+        <input type="text" required className="form-control" onChange={(e)=>{setUser({...user,fullname:e.target.value})}}/>
       </div>
       <div className="w-50 p-2">
         <label htmlFor="" className="form-label">Mobile Number</label>
-        <input type="text" className="form-control" onChange={(e)=>{setUser({...user,mobile:e.target.value})}} />
+        <input type="text" required className="form-control" onChange={(e)=>{setUser({...user,mobile:e.target.value})}} />
       </div>
       <div className="w-50 p-2">
         <label htmlFor="" className="form-label">Vehicle Registration Number</label>
-        <input type="text" className="form-control" onChange={(e)=>{setUser({...user,carreg:e.target.value})}} />
+        <input type="text" required className="form-control" onChange={(e)=>{setUser({...user,carreg:e.target.value})}} />
       </div>
       <div className="w-50 p-2">
         <label htmlFor="" className="form-label">Select Car-Class</label>
@@ -57,7 +57,6 @@ function Details(props) {
         </div>
       </div>
     </div>
-
 
     <div className="d-flex flex-wrap justify-content-center">
       <button className="mt-3 btn btn-outline-danger" onClick={updateUser}>Next</button>

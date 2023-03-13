@@ -107,24 +107,28 @@
       "id": 2
     },
     {
-      "Username": "",
-      "Fullname": "",
-      "EmailID": "",
-      "Mobile": "",
-      "Pincode": "",
-      "Password": "",
-      "RePassword": "",
+      "username": "Rajureddy124",
+      "fullname": "Rajasekhar Reddy",
+      "mobile": "9526126243",
+      "email": "raju121@gmail.com",
+      "password": "Elonmusk@01",
+      "rePassword": "Elonmusk@01",
       "id": 3
     },
     {
-      "Username": "",
-      "Fullname": "",
-      "EmailID": "",
-      "Mobile": "",
-      "Pincode": "",
-      "Password": "",
-      "RePassword": "",
+      "Username": "shankarburner",
+      "Fullname": "Sai Shankar",
+      "Mobile": "9484842982",
+      "Email": "yhbadv@vbsh.com",
+      "Pincode": "576565",
+      "City": "vellore",
+      "State": "tamilnadu",
+      "Password": "Vanjangi@01",
+      "RePassword": "Vanjangi@01",
       "id": 4
+    },
+    {
+      "id": 5
     }
   ],
   "posts": [

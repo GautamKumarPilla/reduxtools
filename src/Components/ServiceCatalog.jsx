@@ -39,7 +39,7 @@ function ServiceCatalog() {
             </li>
         })
       }
-      <button onClick={()=>{teleport('/booking')}} className="d-flex mx-auto text-light border border-2 border-warning btn btn-outline-success">Book Service</button>
+      <button onClick={()=>{teleport('/booking')}} className="d-flex mx-auto text-light border border-2 border-warning btn btn-outline-info">Book Service</button>
     </div>
   )
 }

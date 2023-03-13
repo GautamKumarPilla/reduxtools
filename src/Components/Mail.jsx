@@ -1,11 +1,13 @@
+import { Field, Form, Formik } from 'formik';
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import * as Yup from 'yup';
 
 function Mail() {
   var teleport = useNavigate();
-  useEffect(()=>{
+  // useEffect(()=>{
     
-    },[])
+  //   },[])
   return (
     <div class='bg-text'>
       <div className="w-25 mx-auto">

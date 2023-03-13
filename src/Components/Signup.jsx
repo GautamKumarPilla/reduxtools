@@ -12,31 +12,37 @@ const SignUp =()=>{
             url: 'http://localhost:4000/signup',
             data: newUser
         }).then(()=>{
-            alert('added successfully')
+            alert("Signup Successful!")
         });
-    },[])
-
+    },[newUser])
+  
     return(
-        <div className="sign-text">
-        <div className="w-75 mx-auto">
-            <div>
+        <div className="bg-text">
+        <div className="w-50 mx-auto">
+            <div className="">
                 <Formik
                     initialValues={{
-                        'username':'',
-                        'fullname':'',
-                        'mobile':'',
-                        'email':'',
-                        'password':'',
-                        'rePassword':''
+                        'Username':'',
+                        'Fullname':'',
+                        'Mobile':'',
+                        'Email':'',
+                        'Pincode':'',
+                        'City':'',
+                        'State':'',
+                        'Password':'',
+                        'RePassword':''
                     }}
                     
                     validationSchema={Yup.object({
-                        username:Yup.string().max(30).min(10).required('*Please enter your email or mobile number'),
-                        fullname:Yup.string().max(20).min(10).required('*enter your name'),
-                        mobile:Yup.string().max(10).required('*enter your 10 digits mobile number'),
-                        email:Yup.string().required('*enter your email'),
-                        password:Yup.string().required('*enter your password').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,"Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
-                        rePassword:Yup.string().oneOf([Yup.ref('password'),null],'*password must match')
+                        Username:Yup.string().max(30).min(10).required('*Please enter your email or mobile number'),
+                        Fullname:Yup.string().max(20).min(10).required('*Enter your fullname'),
+                        Mobile:Yup.string().max(10).required('*Enter your 10 digits mobile number'),
+                        Email:Yup.string().required('*Enter your email'),
+                        Pincode:Yup.string().required('*Enter pincode'),
+                        City:Yup.string().required('*Enter city'),
+                        State:Yup.string().required('*Enter state'),
+                        Password:Yup.string().required('*Enter your password').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8})/,"Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
+                        RePassword:Yup.string().oneOf([Yup.ref('Password'),null],'*Password must match')
                     })}
 
                     onSubmit={(values)=>{
@@ -44,38 +50,48 @@ const SignUp =()=>{
                         setNewUser({...newUser,...values});
                     }}
                 >
-
                     {
                         (formik)=>{
-
                             return(
                                 <Form onSubmit={formik.handleSubmit} className="form-control" style={{backgroundColor: 'rgb(233,234,236)'}}>
                                     <h2 className="border-bottom text-center">Sign-Up</h2>
-                                    <label htmlFor="us" className="form-lable mt-1">Username</label>
-                                    <Field className="form-control" name="username" placeholder="mail or mobile number"></Field>
-                                    <div className="text-danger">{formik.touched.username && formik.errors.username}</div>
+                                    <label htmlFor="usa" className="form-lable mt-1">Username</label>
+                                    <Field className="form-control" name="Username" placeholder="Enter username or mail"></Field>
+                                    <div className="text-danger"><small>{formik.touched.Username && formik.errors.Username}</small></div>
 
-                                    <label htmlFor="" className="form-lable mt-1">Full Name</label>
-                                    <Field className="form-control" name="fullname"></Field>
-                                    <div className="text-danger">{formik.touched.fullname && formik.errors.fullname}</div>
+                                    <label htmlFor="fn" className="form-lable mt-1">Full Name</label>
+                                    <Field className="form-control" name="Fullname" placeholder="Enter fullname"></Field>
+                                    <div className="text-danger"><small>{formik.touched.Fullname && formik.errors.Fullname}</small></div>
 
-                                    <label htmlFor="" className="form-lable mt-1">Mobile</label>
-                                    <Field className="form-control" name='mobile'></Field>
-                                    <div className="text-danger">{formik.touched.mobile && formik.errors.mobile}</div>
+                                    <label htmlFor="mo" className="form-lable mt-1">Mobile</label>
+                                    <Field className="form-control" name='Mobile' placeholder="Enter contact number"></Field>
+                                    <div className="text-danger"><small>{formik.touched.Mobile && formik.errors.Mobile}</small></div>
 
-                                    <label htmlFor="" className="form-lable mt-1">Email ID</label>
-                                    <Field className="form-control" name='email'></Field>
-                                    <div className="text-danger">{formik.touched.email && formik.errors.email}</div>
+                                    <label htmlFor="em" className="form-lable mt-1">Email ID</label>
+                                    <Field className="form-control" name='Email' placeholder="Enter email"></Field>
+                                    <div className="text-danger"><small>{formik.touched.Email && formik.errors.Email}</small></div>
 
-                                    <label htmlFor="" className="form-lable mt-1">Password</label>
-                                    <Field className="form-control" name='password'></Field>
-                                    <div className="text-danger"><small>{formik.touched.password && formik.errors.password}</small></div>
+                                    <label htmlFor="pc" className="form-lable mt-1">Pincode</label>
+                                    <Field className="form-control" name='Pincode' placeholder="Enter here"></Field>
+                                    <div className="text-danger"><small>{formik.touched.Pincode && formik.errors.Pincode}</small></div>
 
-                                    <label htmlFor="" className="form-lable mt-1">Re-type Password</label>
-                                    <Field className="form-control" name='rePassword'></Field>
-                                    <div className="text-danger"><small>{formik.touched.rePassword && formik.errors.rePassword}</small></div>
+                                    <label htmlFor="cy" className="form-lable mt-1">City</label>
+                                    <Field className="form-control" name='City' placeholder="Enter here"></Field>
+                                    <div className="text-danger"><small>{formik.touched.City && formik.errors.City}</small></div>
+
+                                    <label htmlFor="se" className="form-lable mt-1">State</label>
+                                    <Field className="form-control" name='State' placeholder="Enter here"></Field>
+                                    <div className="text-danger"><small>{formik.touched.State && formik.errors.State}</small></div>
+
+                                    <label htmlFor="pwd" className="form-lable mt-1">Password</label>
+                                    <Field className="form-control" name='Password' placeholder="Enter password"></Field>
+                                    <div className="text-danger"><small>{formik.touched.Password && formik.errors.Password}</small></div>
+
+                                    <label htmlFor="rpwd" className="form-lable mt-1">Confirm Password</label>
+                                    <Field className="form-control" name='RePassword' placeholder="Re-enter password"></Field>
+                                    <div className="text-danger"><small>{formik.touched.RePassword && formik.errors.RePassword}</small></div>
                                     <div style={{textAlign:'center'}}>
-                                        <button type="submit"  className="btn btn-dark w-25 mx-1 mt-3">Submit</button>
+                                        <button type="submit" className="btn btn-outline-success border border-3 border-danger w-25 mx-1 mt-3">Submit</button>
                                     </div>
                                 </Form>
                             )
@@ -112,7 +128,7 @@ export default SignUp;
 //       url: 'http://localhost:4000/signup',
 //       data: newUser
 //     }).then(()=>{
-//       window.screenLeft("Added")
+//       alert("Signup Successful!")
 //     })
 //   }
 
