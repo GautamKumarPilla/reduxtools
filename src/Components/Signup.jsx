@@ -14,7 +14,7 @@ const SignUp =()=>{
         }).then(()=>{
             alert("Signup Successful!")
         });
-    },[newUser])
+    },[newUser,setNewUser])
   
     return(
         <div className="bg-text">

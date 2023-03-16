@@ -12,7 +12,8 @@ const Login =()=>{
             user===setUser && teleport('/booking') 
         })
        },[user,teleport])
-   
+       
+
     return(
     <div className="bg-text">
     <div className="w-25 mx-auto">
@@ -23,17 +24,17 @@ const Login =()=>{
             <label htmlFor="" className="form-lable mt-2 text-danger">Password</label>
             <input type="password" required placeholder="Enter password" className="form-control"/>
             <div className="mt-2">
-            <Link to="/mail" className="text-warning text-decoration-none" onMouseOver={{}}><p>Forgot Password?</p></Link>
+            <Link to="/mail" className="text-warning text-decoration-none"><p>Forgot Password?</p></Link>
             </div>
-            <div className="d-flex justify-content-center ">
-            <button className="btn btn-outline-dark border border-3 border-danger mt-2" onClick={()=>{teleport('/booking')}}>Submit</button>
+            <div className="d-flex justify-content-center">
+            <button className="btn btn-outline-light border border-3 border-info mt-2" onClick={()=>{teleport('/booking')}}>Submit</button>
             </div>
         </form>
         <Link to="/signup" className="text-light">Don't have an account yet?(SignUp)</Link>
     </div>
-    </div>
+    </div> 
     )
-};
+}; 
 
 //style={{onhover:'backgroundColor:blue'}}
 
